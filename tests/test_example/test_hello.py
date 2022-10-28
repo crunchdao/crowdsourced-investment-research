@@ -1,6 +1,5 @@
 """Tests for hello function."""
 import pytest
-
 from desci.example import hello
 
 
