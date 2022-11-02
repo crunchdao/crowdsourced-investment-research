@@ -1,7 +1,8 @@
 ---
-title: ""
-author: []
-date: ""
+title: "CROWDSOURCED INVESTMENT RESEARCH"
+subtitle: "BY CRUNCHDAO"
+author: [Matteo Manzi]
+date: "2022/11/01"
 lang: "en"
 colorlinks: true,
 titlepage: true,
