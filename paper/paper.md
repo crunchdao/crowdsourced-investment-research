@@ -33,10 +33,19 @@ footer-right: "Matteo Manzi"
 
 - [@Prado_2018]
 
+- [@Craib_2017]
+
 - Discuss (Figure \ref{fig:vc})
 
 ![A portion of the fund’s performance is used to buyback $CRUNCH tokens, and use them as rewards for the next tournaments, leading to a virtuous cycle between the fund and the DAO.\label{fig:vc}](figures/virtuouscycle.png)
 
+CrunchDAO aims at providing a \textit{market-neutral} signal: a signal able to generate returns regardless of market conditions. 
+
+\begin{equation}
+r_i = \sum_k X_{ik} f_k + u_i
+\end{equation}
+
+By balancing our model with long and short positions, we minimise our exposure to any inherent market risks.
 
 Structure of the paper:
 
@@ -69,12 +78,12 @@ Proprietary Data and Community Data.
 
 CrunchDAO makes use of different datasets.
 
-- C-MECHANICS
-- E-KINETIC
-- B-VOLATILITY
-- 3B1-SIGNAL
-- DOLLY
-- GORDON-GEEKO
+- C-MECHANICS: This strategy is a trend-following strategy based on the trend of idiosyncratic (an individualizing characteristic) return and volatility.
+- E-KINETIC: This momentum outlook aims to systematically isolate and harvest excess returns arising from behavioral market anomalies by investing in diversification, not performance.
+- B-VOLATILITY: This strategy identifies distortions in volume, price, and volatility between short-dated options and stock prices.
+- 3B1-SIGNAL: Institutional investors are leveraging equity factor risk models (Sector / Country Stock etc.) to predict return and hedge their bets.  We investigate the extent to which nonlinearities not captured by standard linear models within equity factor risk models are present. Some generated factor returns and information ratios higher than corresponding linear factors
+- DOLLY: Portfolio managers invest a tremendous amount of time and resources in identifying equity that will outperform the market in the long term - alpha- ; In Dolly, the community leverages machine learning to select top long-term asset managers and piggyback their trades. Securities and Exchange Commission (SEC) 13f filing data offer valuable insight into top asset managers’ holdings at each quarterly filing point.
+- GORDON-GEEKO: This strategy uses trade information from top management and senior executives (i.e. insiders) as it has been demonstrated in past academic research that insiders have insight - or alpha - over other investors.
 
 - How can people add different datasets? Mention [Weavechain](https://www.weavechain.com/) and DeSci Collaborative Data, and https://oceanprotocol.com/
 
@@ -102,6 +111,8 @@ Mean and Median. Discuss Ensamble Averging.
 ## Porfolio Optimization
 
 [@Chriss_2005], [@Crama_2003]
+
+The constraints for CrunchDAO's portfolio are neutrality with respect to dollar, Risk Indices, Styles factors and Industry factors.
 
 - [Convex Optimization](https://en.wikipedia.org/wiki/Concavification), but keep also in mind [Convexification](http://larsblackmore.com/publications.htm) done in space: I would expect here to have something similar, if not more non-convex.
 
