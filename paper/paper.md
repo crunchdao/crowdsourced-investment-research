@@ -31,11 +31,9 @@ footer-right: "Matteo Manzi"
 
 ## Introduction
 
-- [@Prado_2018]
+[@Prado_2018] and [@Craib_2017] will be discussed here.
 
-- [@Craib_2017]
-
-- Discuss (Figure \ref{fig:vc})
+Figure \ref{fig:vc}:
 
 ![A portion of the fund’s performance is used to buyback $CRUNCH tokens, and use them as rewards for the next tournaments, leading to a virtuous cycle between the fund and the DAO.\label{fig:vc}](figures/virtuouscycle.png)
 
@@ -47,16 +45,9 @@ r_i = \sum_k X_{ik} f_k + u_i
 
 By balancing our model with long and short positions, we minimise our exposure to any inherent market risks.
 
-Structure of the paper:
-
-- Tournament
-- Metamodeling
-- Portfolio Optimization
-
 ## The Tournament
 
-- [@Prado_2019] to be discussed in this section;
-
+[@Prado_2019] will be discussed in this section;
 
 ### Data
 
@@ -85,9 +76,6 @@ CrunchDAO makes use of different datasets.
 - DOLLY: Portfolio managers invest a tremendous amount of time and resources in identifying equity that will outperform the market in the long term - alpha- ; In Dolly, the community leverages machine learning to select top long-term asset managers and piggyback their trades. Securities and Exchange Commission (SEC) 13f filing data offer valuable insight into top asset managers’ holdings at each quarterly filing point.
 - GORDON-GEEKO: This strategy uses trade information from top management and senior executives (i.e. insiders) as it has been demonstrated in past academic research that insiders have insight - or alpha - over other investors.
 
-- How can people add different datasets? Mention [Weavechain](https://www.weavechain.com/) and DeSci Collaborative Data, and https://oceanprotocol.com/
-
-- Discuss how all the metamodels are combined.
 
 ### Staking
 
@@ -98,15 +86,13 @@ CrunchDAO makes use of different datasets.
 
 ## Clustering and Dimensionality Reduction
 
-Discuss symbill attacks and [@Li_2017].
+Symbil attacks: [@Li_2017].
 
-[@Avellaneda_2019], [@Akansu_2021]
+[@Avellaneda_2019], [@Akansu_2021] will be discussed here.
 
 ## Ensemble learning
 
-There is a need to align the incentives of the single tournament players with the DAO as a whole. Tournament players cannot build their model on some data aiming at maximizing a correlation score when the DAO pays based on a different metric: if we want to treat tournament players fairly, we have to give them access to the metamodel, so that they can adjust their goal to the maximization of the True Contribution. We are assuming that such metric is the best objective, at the tournament level, that maximizes the long-term performance of the signal produced by the DAO. Moreover, there is alredy a problematic assumption in splitting this optimization problem into a sequence of two optimization problems. More research is necessary.
-
-Mean and Median. Discuss Ensamble Averging.
+Ensamble Averging will be presented here.
 
 ## Porfolio Optimization
 
@@ -114,8 +100,6 @@ Mean and Median. Discuss Ensamble Averging.
 
 The constraints for CrunchDAO's portfolio are neutrality with respect to dollar, Risk Indices, Styles factors and Industry factors.
 
-- [Convex Optimization](https://en.wikipedia.org/wiki/Concavification), but keep also in mind [Convexification](http://larsblackmore.com/publications.htm) done in space: I would expect here to have something similar, if not more non-convex.
-
-- Targets defined by [Barra Risk Factor Analysis](https://www.investopedia.com/terms/b/barra-risk-factor-analysis.asp);
+Markovitz porfolio theory and constraints are discussed here.
 
 # References
