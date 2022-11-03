@@ -12,9 +12,12 @@ titlepage-rule-height: 0
 titlepage-background: "./figures/cover.pdf"
 header-left: "\\hspace{1cm}"
 header-right: "Page \\thepage"
-footer-left: "Crowdsourced Investment Research by CrunchDAO"
-footer-right: "Matteo Manzi"
+footer-left: "Crowdsourced Investment Research"
+footer-right: "CrunchDAO"
+abstract: "Markets are complex, high-dimensional, chaotic, stochastic, non-Gaussian dynamical systems. With a data-driven perspective, CrunchDAO's tokenomics powers a crowdsourced investment strategy that, via machine and ensemble learning, leads to competitive financial services."
 ---
+
+\newpage
 
 # List of contributors
 
