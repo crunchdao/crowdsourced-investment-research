@@ -24,7 +24,7 @@ abstract: "Markets are complex, high-dimensional, chaotic, stochastic, non-Gauss
 | Full Name | Github @ | Discord @ | Date |
 |----------|:---------------:|:-----------------:|------------|
 | Matteo Manzi | matteoettam09 | matteoettam09#9362 | 2022/10/28 |
-| Enzo Caceres | @caceresenzo| Enzo Caceres#4224 | 2022/11/07 |
+| Enzo Caceres | caceresenzo| Enzo Caceres#4224 | 2022/11/07 |
 |||||
 |||||
 
