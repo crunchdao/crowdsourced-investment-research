@@ -1,34 +1,21 @@
 ---
-title: "CROWDSOURCED INVESTMENT RESEARCH"
-subtitle: "BY CRUNCHDAO"
-author: [Matteo Manzi]
-date: "2022/11/01"
-lang: "en"
+title: "CROWDSOURCED INVESTMENT RESEARCH",
+subtitle: "BY CRUNCHDAO",
+author: ["Matteo Manzi", "Enzo Caceres"],
+date: "2022/11/01",
+lang: "en",
 colorlinks: true,
 titlepage: true,
-titlepage-text-color: "FFFFFF"
-titlepage-rule-color: "360049"
-titlepage-rule-height: 0
-titlepage-background: "./figures/cover.pdf"
-header-left: "\\hspace{1cm}"
-header-right: "Page \\thepage"
-footer-left: "Crowdsourced Investment Research"
-footer-right: "CrunchDAO"
+titlepage-text-color: "FFFFFF",
+titlepage-rule-color: "360049",
+titlepage-rule-height: 0,
+titlepage-background: "./figures/cover.pdf",
+header-left: "\\hspace{1cm}",
+header-right: "Page \\thepage",
+footer-left: "Crowdsourced Investment Research",
+footer-right: "CrunchDAO",
 abstract: "Markets are complex, high-dimensional, chaotic, stochastic, non-Gaussian dynamical systems. With a data-driven perspective, CrunchDAO's tokenomics powers a crowdsourced investment strategy that, via machine and ensemble learning, leads to competitive financial services."
 ---
-
-\newpage
-
-# List of contributors
-
-| Full Name | Github @ | Discord @ | Date |
-|----------|:---------------:|:-----------------:|------------|
-| Matteo Manzi | matteoettam09 | matteoettam09#9362 | 2022/10/28 |
-| Enzo Caceres | caceresenzo| Enzo Caceres#4224 | 2022/11/07 |
-|||||
-|||||
-
-\newpage
 
 # Crowdsourced Investment Research
 
