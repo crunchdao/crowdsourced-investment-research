@@ -69,6 +69,7 @@ CrunchDAO makes use of different datasets.
 
 ### Staking
 
+Demonstration with Gian Michele - to be removed.
 
 ### The Scoring System
 
