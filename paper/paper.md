@@ -92,4 +92,8 @@ The constraints for CrunchDAO's portfolio are neutrality with respect to dollar,
 
 Markovitz porfolio theory and constraints are discussed here.
 
+# Test
+
+Hello Raffaele
+
 # References
