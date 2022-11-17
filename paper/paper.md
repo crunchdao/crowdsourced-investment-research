@@ -69,6 +69,7 @@ CrunchDAO makes use of different datasets.
 
 ### Staking
 
+Hello world. I am showing Hossein how to participate in the staking bounty with this *tool*.
 
 ### The Scoring System
 
