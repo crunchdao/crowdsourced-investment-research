@@ -69,6 +69,12 @@ CrunchDAO makes use of different datasets.
 
 ### Staking
 
+Here J B is proposing something related to *staking*.
+
+$$
+x = \sum_i^N \sin(X)
+$$
+
 
 ### The Scoring System
 
