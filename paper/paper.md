@@ -23,7 +23,7 @@ abstract: "Markets are complex, high-dimensional, chaotic, stochastic, non-Gauss
 
 [@Prado_2018] and [@Craib_2017] will be discussed here.
 
-Figure \ref{fig:vc}:
+Figure \ref{fig:vc} shows the following:
 
 ![A portion of the fund’s performance is used to buyback $CRUNCH tokens, and use them as rewards for the next tournaments, leading to a virtuous cycle between the fund and the DAO.\label{fig:vc}](figures/virtuouscycle.png)
 
