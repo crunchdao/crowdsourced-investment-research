@@ -69,6 +69,18 @@ CrunchDAO makes use of different datasets.
 
 ### Staking
 
+Hello world.
+
+$$
+x \approx \sin(x)
+$$
+
+```python
+for i in range(n):
+  x.append(i**2)
+```
+
+I would like to stake like this because of this math and this paper...
 
 ### The Scoring System
 
