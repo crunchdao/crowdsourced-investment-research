@@ -69,6 +69,16 @@ CrunchDAO makes use of different datasets.
 
 ### Staking
 
+This is my bounty proposal, to be shared with the community. Both CTRL+S and the re-render botton show you the pdf you are working on.
+
+You can add codes, using
+
+```python
+for i in range(5):
+  print(f"Hello World, {i}")
+```
+
+Look:
 
 ### The Scoring System
 
