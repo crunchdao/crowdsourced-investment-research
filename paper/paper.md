@@ -69,6 +69,7 @@ CrunchDAO makes use of different datasets.
 
 ### Staking
 
+
 This is my bounty proposal, to be shared with the community. Both CTRL+S and the re-render botton show you the pdf you are working on.
 
 You can add codes, using
@@ -77,10 +78,6 @@ You can add codes, using
 for i in range(5):
   print(f"Hello World, {i}")
 ```
-
-Look:
-
-This is a line to add a modification.
 
 ### The Scoring System
 
