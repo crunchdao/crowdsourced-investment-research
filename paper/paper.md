@@ -69,6 +69,18 @@ CrunchDAO makes use of different datasets.
 
 ### Staking
 
+Hello Foresight, this is *italic* and I am listing:
+
+- dog
+- cat
+
+and some code
+
+```python
+a = 3
+print('something')
+```
+
 
 ### The Scoring System
 
