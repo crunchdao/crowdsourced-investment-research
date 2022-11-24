@@ -82,6 +82,12 @@ for i in range(n):
 
 I would like to stake like this because of this math and this paper...
 
+Something else added later...
+
+- THis
+- That
+- This
+
 ### The Scoring System
 
 - [Spearman's rank correlation coefficient](https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient)
