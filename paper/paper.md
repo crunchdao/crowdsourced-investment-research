@@ -21,7 +21,7 @@ abstract: "Markets are complex, high-dimensional, chaotic, stochastic, non-Gauss
 
 ## Introduction
 
-[@Prado_2018] and [@Craib_2017] will be discussed here.
+[@Prado_2018] and [@Craib_2017] will be discussed here. aaaaa
 
 Figure \ref{fig:vc}:
 
