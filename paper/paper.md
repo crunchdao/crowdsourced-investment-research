@@ -69,6 +69,18 @@ CrunchDAO makes use of different datasets.
 
 ### Staking
 
+I have a suggestion, I couldn't code it up for CrunchDAO, but I have investigated it in the past for Numerai:
+
+- [Forum post](https://forum.numer.ai/t/meta-analysis-clustering-model-performances/1653)
+- [Code example here](https://github.com/FChmiel/numerai_model_performance)
+
+Essentially, this provides a way of estimating originality: rather than clustering models on their predictions, you cluster models based on their end-of-round correlations for n rounds. This has the effect of grouping models which are different temporally, this provides information about which models perform well together and which models perform well at different points in time. A robust meta model would use models which are a) high performing b) far apart in this low-dimensional space to reduce volatility. I used UMAP for my clustering, but other methods are valid (KMeans)
+
+In addition, some more general thoughts about staking. 
+
+1.  I think "burns" should be placed in a "burn" pool, and then re-distributed somehow: e.g.  to people who submit more than nweeks in a row (not sybil resistant) or as a simple bonus (e.g., X % based on stake, where X is scaled so : burned_amount = X * staked_amount_on_non_burning_models, this will favour models which consistently perform well and means there stakes will grow faster than weaker models (this is also sybil resistant).
+2. I don't think originality calculations based on clustering can ever be fully sybil resistant without KYC - someone can always just pollute the clustering with lots of similar models and then submit a very different model.
+2. I think staking rewards for correlation and originality should be separate, like numerais corr and TC. So their are two pools of reward.
 
 ### The Scoring System
 
