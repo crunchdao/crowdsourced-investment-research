@@ -108,6 +108,16 @@ Having said that, it can be taken up as 2 step process:
 2. Say a provider develops a new feature which is unique wrt all other features in the dataset. Then, the provider can request a custom dataset (obfuscated like existing datasets) which includes that new feature. The provider is then free to use the new feature however they like to make predictions as usual for the tournament. For requesting a custom dataset, a small amount of Crunch can be locked (not staked) to avoid spamming.
 
 
+Also, since, we are possibly moving in the direction of staking, we should acknowledge the pain points that Numerai's staking strategy faces. The model returns are linked to a token whose price is down 85% from the peak. That is a major reason of discomfort for people to stake using it.
+It would be nice if Crunchdao gives an option to get a return based on a stable value from the models.
+Proposal:
+
+1. Assuming a current Crunch price of $3. A user locks in 100 crunch worth $300 for a duration of 1 year (for purpose of staking on a model)
+2. Provide an option to earn model returns as a % of $$ value (not Crunch). In this case, the model returns will be based on correlation performance and $300 staked value.
+3. If opting for payouts based on $$ value, the payout factor is set to a lower value (say 0.5), i.e. Crunch staking based returns are double (because of price risk)
+4. For people opting for payouts based on $$ value and locking their Crunch for 1 year, provide a predetermined floor price (say 0.66 times current price) so that people are confident that their locked tokens wouldn't significantly depreciate in value over the locked 1 year period. The floor price can be guaranteed by the CrunchDao treasury.
+5. Downside risk of losing your stake still exists if the model performs poorly.
+
 ### The Scoring System
 
 - [Spearman's rank correlation coefficient](https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient)
