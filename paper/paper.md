@@ -14,7 +14,7 @@ header-right: "Page \\thepage"
 footer-left: "CrunchDAO Staking Proposal"
 ---
 
-# Introductiion
+# Introduction
 
 Holding a tournament like Crunchdao or Numerai is a multifaceted challenge. Here we have two objectives, a performance measure that could determine how good a prediction is and a diversity measure that tells us how different the model will be. It is well-known that a blend (a weighted combination of a set of excellent and diverse models) can beat even the best single prediction. 
 
@@ -46,13 +46,13 @@ We can replace this metric with a more complex one, given that it can be used fo
 
 # Originality Measure
 
-Here we can use [Numerai's metamodel contribution (MMC) score](https://docs.numer.ai/tournament/metamodel-contribution). This score shows how much we gain by including a model in the final model and considering it can prevent heavily staked models from being more diverse, so we don't end up with a few similar predictions dominating others. To calculate a user's ($u$) $MMC$ for a given round we
+Here we can use [Numerai's metamodel contribution (MMC) score](https://docs.numer.ai/tournament/metamodel-contribution). This score shows how much we gain by including a model in the final model and considering it can prevent heavily staked models from being more diverse, so we don't end up with a few similar predictions dominating others. To calculate a user's $MMC$ for a given round we
 
  * Select a random 67% of all staking users (with replacement)
  * calculate the stake-weighted predictions of these users
  * transform both the stake-weighted predictions and $u$'s model to be uniformly distributed
  * neutralize $u$'s model with respect to the uniform stake-weighted predictions
- * calculate the covariance between u's model and the targets
+ * calculate the covariance between $u$'s model and the targets
  * divide this value by 0.0841 (this step is to bring the expected score up to the same magnitude as the correlation, this can be skipped because we do not need it to be on the same scale as the correlations)
  * the resultant value is an $MMC$ score
  * repeat this whole process 20 times and keep the average $MMC$ score 
@@ -80,7 +80,7 @@ There is no single solution to this problem; instead, there are possible solutio
 
 ## The Proposed Rewarding Method 
 
-For a user $u$, we calculate the ($PM\_u$, $MMC\_u$) and then find the Pareto optimal solutions in the set of all users, so we end up with two sets of dominated and not-dominated solution vectors. Finally, based on the result, we multiply the staking of users with Pareto optimal solutions with a value called $\alpha$ (called the rewarding factor) where $\alpha > 1$. This parameter determines how much we value having high values for both objectives simultaneously rather than just one objective.   
+For a user $u$, we calculate the ($PM_u$, $MMC_u$) and then find the Pareto optimal solutions in the set of all user submissions, so we end up with two sets of dominated and not-dominated solution vectors. Finally, based on the result, we multiply the staking of users with Pareto optimal solutions with a value called $\alpha$ (called the rewarding factor) where $\alpha > 1$. This parameter determines how much we value having high values for both objectives simultaneously rather than just one objective.   
 
 For the user $u$ with $C_u$ amount of Crunch tokens, if his model is not dominated, his staking is multiplied by $\alpha$ so his new $C_u$ would be $C_{u-new}=\alpha \times C_u$ ). This way, users are motivated to increase the accuracy and diversity of their model at the same time. It also keeps the door open for users with not large stakings to participate because if others do not dominate their predictions, their rewards are boosted as if they are given bonuses for their performance. If we do not consider this factor, the whole prize pool will be swept by whales with large amounts of stakings after a while. Additionally, with this mechanism, the population of predictions is motivated to move towards more diverse and promising solutions.
 
