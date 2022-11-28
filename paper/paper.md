@@ -67,8 +67,17 @@ CrunchDAO makes use of different datasets.
 - GORDON-GEEKO: This strategy uses trade information from top management and senior executives (i.e. insiders) as it has been demonstrated in past academic research that insiders have insight - or alpha - over other investors.
 
 
-### Staking
+### Staking - Crunch Token
 
+### Staking - Dollar Denominated
+
+- Data Scientists and mathematicans may not be in sync with what is happening in the crypto markets and may be turned away from joining the platform (and staking using the Crunch token) because of token volatility.
+- It is prudent to attract these knowledgable people to the platform as the Metamodel construction can benefit from such users, eventually translating in better return for the Hedge Fund(s).
+- Proposal is to introduce Dollar denominated staking using a stablecoin like USDC/DAI. Users can choose to stake USDC and the payouts (or burns) will be made in USDC.
+- Since Dollar Denominated (DD) stakers are taking lesser risk than the Crunch token stakers, the DD stakers will subsidize the Crunch token stakers.
+- 40% of the payouts earned by DD stakers will be sent to a Smart Contract. The USDC from this Smart Contract will be used to buy Crunch tokens on a Monthly basis.
+- The Crunch tokens so obtained will be added to the Monthly payouts and distribiuted among the Crunch stakers.
+- This is a win-win as it benfits the CrunchDAO community and also gives an option for people who want to stay away from crypto. 
 
 ### The Scoring System
 
