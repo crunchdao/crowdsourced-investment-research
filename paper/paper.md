@@ -69,10 +69,33 @@ CrunchDAO makes use of different datasets.
 
 ### Staking
 
-
 ### The Scoring System
 
 - [Spearman's rank correlation coefficient](https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient)
+
+### Stake performance bonus 
+
+Models with a negative correlation score will have a portion of their staked CRUNCH removed and sent to a "pool". Of the removed CRUNCH:
+
+ - 50 % will be burnt (permanently removed from circulation).
+ - 50 % ("performance bonus") will be re-distributed as a bonus to models which had a positive correlation in the same period.
+ 
+The performance bonus redistributed to a given model ($\beta_i$) will be calculated by, 
+
+$\beta_i = \alpha \cdot \sigma_i \cdot S_i$
+
+- $\beta_i$ is the number of CRUNCH in the performance bonus to be distributed to a given model
+- $\alpha$ is a scaling factor to be fit each round.
+- $\sigma_{i}$ is the models performance (spearman correlation).
+- $S_i$ is the total CRUNCH staked on model $i$.
+
+The scaling factor ($\alpha$) is calculated such that this distribution is Sybil resistant and ensures the total CRUNCH distributed in a given round equals the amount in the burn pool:
+
+$\alpha = \frac{\beta_-}{(\sum_i^+\sigma_{i} \cdot S_i)}$
+
+where the summation is over all models with positive correlation and $\beta_-$ is the total CRUNCH removed from all models with a negative correlation.
+
+This method will favour those with a larger stake, but will also ensure CRUNCH is re-distributed from low performers to high performers. However, if a model has a large stake, and their model performs poorly, a portion of their staked CRUNCH will be re-distributed to other performers - helping build the stake of high performers with smaller stakes.
 
 ## Clustering and Dimensionality Reduction
 
