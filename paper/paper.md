@@ -69,6 +69,16 @@ CrunchDAO makes use of different datasets.
 
 ### Staking
 
+I would like to propsoe this for this bounty.
+
+```python
+from numpy import asfg
+print('Hello')
+```
+
+- this
+- that 
+- this
 
 ### The Scoring System
 
