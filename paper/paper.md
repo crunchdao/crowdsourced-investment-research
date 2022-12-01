@@ -117,9 +117,13 @@ We are here also assuming that the function $S$ is as close to the identity as p
 
 As the optimal behaviour would be for each player to update their prediction according to the set of predictions of the other players, knowing all the players would optimally do it, the Nash equilibrium would be to update all the predictions until an equilibrium point of the associated discrete dynamical system (assuming such equilibrium exists). Given all this necessary considerations, it is clear how ill-posed the Numerai true contribution setup is.
 
-If such Nash equilibrium exists, if the inertia assumption on the set of non-sybill submissions and associated staking and on the dataset used in the optimizer are met, such setup can work, even being complex.
+If such Nash equilibrium exists, if the inertia assumption on the set of non-sybill submissions and associated staking and on the dataset used in the optimizer are met, such setup can work, even being complex. This would also burn sybill stakes without listening to them. The gradient would be the effect of adding an infinitesimal contribution of noise to the pipeline, negative.
 
-If not, I would propose 
+If not, I would simplify the discussion and score people on 
+
+$$
+\nabla_{w_i} \Phi(y_i)
+$$
 
 ### The Scoring System
 
