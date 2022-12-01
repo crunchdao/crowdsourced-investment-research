@@ -69,6 +69,39 @@ CrunchDAO makes use of different datasets.
 
 ### Staking
 
+The CrunchDAO tournament asks individual to, given a dataset $X$ and a set of targets $y$, build a deterministic nonlinear model:
+
+$$
+y = f(X)
+$$
+
+In order to simplify the discussion, let's think about only one target for $N$ stocks from now on, so that $y$ is a vector $1 \times N$. We have $M$ players, so that every week a matrix $Y$ of size $N \times M$ is submitted. We assume that a vector of stakes $w$, of size $1 \times M$ is submitted as well.
+
+A deterministic metamodel $\Psi$ is applied to obtain, from $(Y, w)$, a vector $\mu$, of size $1 \times N$. Using ensamble averaging, a simple example is a stake-weighted average.
+
+This vector is the input of a constrained convex optimizer $\Phi(\mu)$, whose output is a vector $\omega$  with same size, which leads to a product with the desired characteristics: market neutral, high Sharpe ratio, high Sortino ratio. Let's assume the goal is to maximize the Sharpe ratio of the portfolio for the coming week $S(\omega)$.
+
+At the submission level, we have two kinds of noise: one is noise due to sybills, one is noise due to the probabilistic nature of the proposed supervised learning problem. About the second, if the current dataset is associated with a highly unpredictable market regime, different fitted models will lead to highly different predictions. The metamodel should take this into account.
+
+We also need a staking system that burns tokens from sybills and an associated metamodel that does not listen to them. Sybills submission are by definition belonging to a different probability distribution from $P(y)$, which we can reconstruct from a set of submissions. Hierarchical clustering, Gaussian Mixture, Independent Component analysis can be used to identify sybills in an unsupervised way (no scoring function defined, yet) and remove them.
+
+Once sybills are removed, we can afford to use quadratic voting to perform ensambling: this removes "trend following" implicit assumptions to the pipeline (i.e., if you have a lot of tokens, you have been good in the past, but if a lot of people are pointing in a different direction from you, all together, we should listen more to them than to you, even if the sum of their stakes is lower than your stake). We cannot do this without a sybill resistance, which cannot come from Soul-bound tokens, as wallets can always turn into sybills.
+
+To incentivise for originality, the ensembling is not done on the raw non-sybills, but on clusters of submissions, each of which is associated with the average stake of all the submissions in that cluster. To get the clusters I would use the covariance matrix of the non-sybill submissions (assuming therefore $P(y)$ to be a multivariate Gaussian, making the gaussian mixture a good mechanism to avoid listening to sybills), again in an unsupervised setting.
+
+Up to now, we are only talking about a pipeline to use staking to build a good signal. But what about the reward for tournament players?
+
+In order to align the interst of the DAO as a whole and the tournament players, the most natural choice is to compute the effect of each couple $(y_i, w_i)$ on the metric used to evaluate the product:
+
+$$
+S(\Phi(\Psi(Y)))
+$$
+
+Thinking about true contribution (the metric could also be nonlinear, as I mentioned quadratic voting, but let's keep it simple), the problem is that 
+
+$$
+\frac{\partial}{v}
+$$
 
 ### The Scoring System
 
