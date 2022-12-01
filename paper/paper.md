@@ -97,6 +97,41 @@ Fineprints:
 Sybil attacks will be avoided due to staking. And supporters will tend to stake on a reliable model which will further prevent sybil attacks.
 Payouts will only be made to staked (possibly top 100 staked) models, so no value in pursuing sybil attacks.
 
+\textbf{Example}:
+
+\begin{itemize}
+	\item Model1
+    	\begin{itemize}
+        	\item Total Stake: 1000
+            \item Part of Cluster 1
+            \item Performance metric (spearman correlation): 0.03
+		\end{itemize}
+    \item Model 2
+    	\begin{itemize}
+        	\item Total Stake: 800
+            \item Part of Cluster 2
+            \item Performance metric (spearman correlation): 0.02
+		\end{itemize}
+   	\item Model 3
+    	\begin{itemize}
+        	\item Total Stake: 500
+            \item Part of Cluster 1
+            \item Performance metric (spearman correlation): 0.03
+		\end{itemize}
+    \item Payout multipliers
+    	\begin{itemize}
+        	\item Model 1, Model3 : 0.5  (Since they belong to same cluster)
+            \item Model 2: 1.0  (Unique cluster)
+		\end{itemize}
+    \item Payouts: (Stake * Performance * Multiplier)
+    	\begin{itemize}
+        	\item Model 1: 1000 * 0.03 * 0.5 = 15
+            \item Model 2: 800 * 0.02 * 1.0 = 16
+            \item Model 3: 500 * 0.03 * 0.05 = 7.5
+		\end{itemize}
+\end{itemize}
+Note: Spearman Correlation is a metric that can be used as a starting point. The performance metric will need to be evaluated periodically whether it benefits the Fund performance.
+
 Alpha provider scheme is more nuanced because:
 
 1. Providers may not want to give away their new feature for everyone to use.
