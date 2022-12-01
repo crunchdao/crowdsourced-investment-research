@@ -100,8 +100,26 @@ $$
 Thinking about true contribution (the metric could also be nonlinear, as I mentioned quadratic voting, but let's keep it simple), the problem is that 
 
 $$
-\frac{\partial}{v}
+\nabla_{w_i} S(\Phi(\Psi(Y)))
 $$
+
+is not only a function of $y_i$, but also of the other $M-1$ submissions and stakes.
+
+A partial solution is to make all the scripts of the pipeline open source. We cannot however share the data associated with $\Phi$. Also, $Y$ is not known in advance.
+
+Assuming some degree of inertia in $Y$ and the data associated with $\Phi$ from one week to another, each player can play "offline" against the other submissions to maximize:
+
+$$
+\nabla_{w_i} \Phi(\Psi(Y))
+$$
+
+We are here also assuming that the function $S$ is as close to the identity as possible (desirable, as we would like to predict the market, and building a pipeline for which it is true that past performance is the best predictor of success is what we are aiming at).
+
+As the optimal behaviour would be for each player to update their prediction according to the set of predictions of the other players, knowing all the players would optimally do it, the Nash equilibrium would be to update all the predictions until an equilibrium point of the associated discrete dynamical system (assuming such equilibrium exists). Given all this necessary considerations, it is clear how ill-posed the Numerai true contribution setup is.
+
+If such Nash equilibrium exists, if the inertia assumption on the set of non-sybill submissions and associated staking and on the dataset used in the optimizer are met, such setup can work, even being complex.
+
+If not, I would propose 
 
 ### The Scoring System
 
