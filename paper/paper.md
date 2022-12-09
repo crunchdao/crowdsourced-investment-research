@@ -46,7 +46,7 @@ We can replace this metric with a more complex one, given that it can be used fo
 
 # Originality Measure
 
-Here we can use [Numerai's metamodel contribution (MMC) score](https://docs.numer.ai/tournament/metamodel-contribution). This score shows how much we gain by including a model in the final model and considering it can prevent heavily staked models from being more diverse, so we don't end up with a few similar predictions dominating others. To calculate a user's $MMC$ for a given round we
+Here we can use [Numerai's metamodel contribution (MMC) score](https://web.archive.org/web/20220816101020/https://docs.numer.ai/tournament/metamodel-contribution). This score shows how much we gain by including a model in the final model and considering it can prevent heavily staked models from being more diverse, so we don't end up with a few similar predictions dominating others. To calculate a user's $MMC$ for a given round we
 
  * Select a random 67% of all staking users (with replacement)
  * calculate the stake-weighted predictions of these users
