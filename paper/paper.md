@@ -97,6 +97,16 @@ Fineprints:
 Sybil attacks will be avoided due to staking. And supporters will tend to stake on a reliable model which will further prevent sybil attacks.
 Payouts will only be made to staked (possibly top 100 staked) models, so no value in pursuing sybil attacks.
 
+Problems with K-Means clustering in CrunchDao context:
+
+1. K-means clustering is dependent on how it selects the initial points as cluster centroids. So, entirely different clusters are possible just by changing the random seed. Similar submissions might fall in different clusters in one run, and in same cluster in another run. This unpredictability is undesirable (and might seem unfair if unexpected results show up).
+2. K-Means requires the 'K' parameter, i.e. we need to specify upfront how many clusters should be formed. This is non-trivial and requires another level of analysis called the 'Elbow method'; this is a visual analysis for finding the appropriate value of 'K'. This again is a subjective choice and somebody will be required to select that value for each round, this again is undesirable.
+
+Benefits of Hierarchical clustering (Agglomerative clustering) in CrunchDao context:
+
+1. No randomness. It starts by forming clusters of the most similar submissions and then forms bigger clusters from these small clusters in a hierarchical way. This will always produce the same clustering results.
+2. No need to specify any hyperparameter. A threshold needs to be applied at the end of the process to form clusters. In our context, let's say we want all submissions which are more than 90% correlated to fall in the same cluster, then we put the threshold of 'correlation distance' as (1 - 0.9). This is easy to explain and interpret.
+
 \textbf{Example}:
 
 \begin{itemize}
@@ -129,9 +139,29 @@ Payouts will only be made to staked (possibly top 100 staked) models, so no valu
             \item Model 2: 800 * 0.02 * 1.0 = 16
             \item Model 3: 500 * 0.03 * 0.05 = 7.5
 		\end{itemize}
+    \item Payout distribution to stakers (Model 2 example)
+    	\begin{itemize}
+        	\item Total payouts for Model 2 = 16
+        	\item Num Supporters = 3 (say) 
+            \item Num Heroes = 1 (always)
+            \item Hero Stake = 50 ; Supporters stake: 250 * 3 = 750 (assuming each supporter stakes 250 each)
+            \item Hero commission (irrespective of Hero stake) = 25\% (to be chosen by Hero)
+            \item Commission going to Hero upfront = 16 * 0.25 = 4
+            \item Remaining Payouts : 16 - 4 = 12
+            \item 12 is distributed to all Supporters + Hero based on their stake 
+            \item Hero gets : $\frac{50}{800}$ * 12
+            \item Each supporter gets: $\frac{250}{800}$ * 12
+            \item Hero commision is in addition to Hero stake payouts. Both are necesssary beacuse Hero commission will lead to competition among Heros to provide best service at lowest commission to attract supporters; and Stake payouts are necessary as they will indicate to the supporters that the Hero has skin in the game and is willing to lose money if performs badly
+        \end{itemize}
 \end{itemize}
 Note: Spearman Correlation is a metric that can be used as a starting point. The performance metric will need to be evaluated periodically whether it benefits the Fund performance.
 
+\emph{Query on discord: Are both Fineprints 2 and 3 needed?}
+
+- Short Answer, Yes. 
+- Fineprint 3 is needed to disincentivise modellers submitting similar predictions.
+- Fineprint 2 is needed to avoid over allocation of capital in a few models. Say over the last month a model gives outsized returns with high originality, then supporters may unsuspectingly want to switch their stakes on this model (which might be highly volatile and detrimental for future rounds). This will unwantedly lead to over allocation in a single model. Hence, having a stake cap on models will be useful. The amount of stakecap can be reviewed from time to time.
+ 
 Alpha provider scheme is more nuanced because:
 
 1. Providers may not want to give away their new feature for everyone to use.
