@@ -78,7 +78,7 @@ plt.show()
 
 
     
-![png](output_5_0.png)
+![png](figures/output_5_0.png)
     
 
 
@@ -136,7 +136,7 @@ plt.show()
 
 
     
-![png](output_10_0.png)
+![png](figures/output_10_0.png)
     
 
 
@@ -176,7 +176,7 @@ plt.show()
 
 
     
-![png](output_14_0.png)
+![png](figures/output_14_0.png)
     
 
 
@@ -233,7 +233,7 @@ plt.grid()
 plt.show()
 ```
 
-![png](output_18_0.png)
+![png](figures/output_18_0.png)
 
 The above graph is an indication of how the rewards will be distributed in each cycle for different scores.
 
