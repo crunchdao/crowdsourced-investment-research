@@ -14,48 +14,24 @@ header-left: "\\hspace{1cm}"
 header-right: "Page \\thepage"
 footer-left: "Crowdsourced Investment Research"
 footer-right: "CrunchDAO"
-abstract: "Markets are complex, high-dimensional, chaotic, stochastic, non-Gaussian dynamical systems. With a data-driven perspective, CrunchDAO's tokenomics powers a crowdsourced investment strategy that, via machine and ensemble learning, leads to competitive financial services."
+abstract: "Markets are complex, high-dimensional, chaotic, stochastic, non-Gaussian dynamical systems. With a data-driven perspective, CrunchDAO's tokenomics powers a crowdsourced investment strategy that, via Machine and Ensemble Learning, leads to competitive financial services."
 ---
 
 # Crowdsourced Investment Research
 
 ## Introduction
 
-[@Prado_2018] and [@Craib_2017] will be discussed here.
+In the context of quantitative finance, in which a systematic, rationalized, quantitative (i.e., scientific) approach is preferred over discretionary decision-making, the field of machine learning is getting a lot of traction [@Prado_2018]. This is because of its natural compatibility with a Bayesian approach [@Barber_2012], characterizing the field of econometrics, but also because of its potential to construct nonlinear models from financial data [@Chan_2022].
 
-Figure \ref{fig:vc} shows the following:
+In this context, CrunchDAO proposes an Ensamble Learning framework via tournaments ([@Craib_2017], [@Prado_2019]), in order to generate \textit{market-neutral} signals.
 
-![A portion of the fund’s performance is used to buyback $CRUNCH tokens, and use them as rewards for the next tournaments, leading to a virtuous cycle between the fund and the DAO.\label{fig:vc}](figures/virtuouscycle.png)
-
-CrunchDAO aims at providing a \textit{market-neutral} signal: a signal able to generate returns regardless of market conditions. 
+## Traditional Econometrics and Risk
 
 \begin{equation}
 r_i = \sum_k X_{ik} f_k + u_i
 \end{equation}
 
-By balancing our model with long and short positions, we minimise our exposure to any inherent market risks.
-
-## The Tournament
-
-[@Prado_2019] will be discussed in this section;
-
-### Data
-
-- Quantization & Obfuscation. Quantile-based/fixed scale quantization.
-
-Proprietary Data and Community Data.
-
-- [Weavechain](https://www.weavechain.com/): [arweave](https://www.arweave.org/) and [filecoin](https://filecoin.io/) make use of IPFS, they do not. Data do not go on chain. [BeekeperAI](https://www.beekeeperai.com/)
-
-- Homomorphic Encryption links [here](https://github.com/microsoft/EVA), [here](https://github.com/microsoft/SEAL), [here](https://www.zama.ai/) CKKS [here](https://blog.openmined.org/ckks-explained-part-1-simple-encoding-and-decoding/).
-
-- [Federated learning](https://en.wikipedia.org/wiki/Federated_learning) + [Ocean Protocol](https://oceanprotocol.com/) for new datasets.
-
-- Confidential Computing: [paper](https://arxiv.org/abs/2110.01390) and [repo](https://github.com/data61/MP-SPDZ) discussing SPDZ.
-
-- [PySyft](https://github.com/OpenMined/PySyft): Syft allows a Data Scientist to ask questions about a dataset and, within privacy limits set by the data owner, get answers to those questions, all without obtaining a copy of the data itself.
-
-- [Zero-knowledge proof](https://en.wikipedia.org/wiki/Zero-knowledge_proof)
+## Data
 
 CrunchDAO makes use of different datasets.
 
@@ -66,25 +42,40 @@ CrunchDAO makes use of different datasets.
 - DOLLY: Portfolio managers invest a tremendous amount of time and resources in identifying equity that will outperform the market in the long term - alpha- ; In Dolly, the community leverages machine learning to select top long-term asset managers and piggyback their trades. Securities and Exchange Commission (SEC) 13f filing data offer valuable insight into top asset managers’ holdings at each quarterly filing point.
 - GORDON-GEEKO: This strategy uses trade information from top management and senior executives (i.e. insiders) as it has been demonstrated in past academic research that insiders have insight - or alpha - over other investors.
 
+### Anonymization 
+
+Data anonymization is performed using quantization schemes.
+
+Here is a non-esaustive list of interesting projects we have been researching and that could provide interesting tools to challange the current design choices:
+
+- [PySyft](https://github.com/OpenMined/PySyft)
+- [Weavechain](https://www.weavechain.com/) 
+- [BeekeperAI](https://www.beekeeperai.com/)
+- [Microsoft SEAL](https://github.com/microsoft/SEAL) and [associated compiler](https://github.com/microsoft/EVA)
+- [ZKML](https://github.com/zkml-community/awesome-zkml)
+- [Zama](https://www.zama.ai/)
+
+## Tournament
 
 ### Staking
 
+A set of proposal are currently being discussed to find a solution for Sybil attack resistance: [@Li_2017].
 
 ### The Scoring System
 
-- [Spearman's rank correlation coefficient](https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient)
+The current Scoring metric is the [Spearman's rank correlation coefficient](https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient) between the submission and the realized targets.
 
-## Clustering and Dimensionality Reduction
+## Metamodeling
 
-Symbil attacks: [@Li_2017].
+### Clustering and Dimensionality Reduction
 
 [@Avellaneda_2019], [@Akansu_2021] will be discussed here.
 
-## Ensemble learning
+### Ensemble learning
 
 Ensamble Averging will be presented here.
 
-## Porfolio Optimization
+### Porfolio Optimization
 
 [@Chriss_2005], [@Crama_2003]
 
