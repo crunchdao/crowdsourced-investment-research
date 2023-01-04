@@ -1,7 +1,7 @@
 ---
 title: "CROWDSOURCED INVESTMENT RESEARCH"
 subtitle: "BY CRUNCHDAO"
-author: [Matteo Manzi, Enzo Caceres, Correlator, Kain, SRK]
+author: [Matteo Manzi, Enzo Caceres, Correlator, Kain, SRK, fortunefavorsthebrave]
 date: "2022/11/01"
 lang: "en"
 colorlinks: true
