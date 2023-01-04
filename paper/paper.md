@@ -1,7 +1,7 @@
 ---
 title: "CROWDSOURCED INVESTMENT RESEARCH"
 subtitle: "BY CRUNCHDAO"
-author: [Matteo Manzi, Enzo Caceres, Correlator, SRK]
+author: [Matteo Manzi, Enzo Caceres, Correlator, Kain, SRK]
 date: "2022/11/01"
 lang: "en"
 colorlinks: true
@@ -24,6 +24,8 @@ abstract: "Markets are complex, high-dimensional, chaotic, stochastic, non-Gauss
 In the context of quantitative finance, in which a systematic, rationalized, quantitative (i.e., scientific) approach is preferred over discretionary decision-making, the field of machine learning is getting a lot of traction [@Prado_2018]. This is because of its natural compatibility with a Bayesian approach [@Barber_2012], characterizing the field of econometrics, but also because of its potential to construct nonlinear models from financial data [@Chan_2022].
 
 In this context, CrunchDAO proposes an Ensamble Learning framework via tournaments ([@Craib_2017], [@Prado_2019]), in order to generate \textit{market-neutral} signals.
+
+In this section, we should make the case of ensamble learning in quantitative finance.
 
 ## Traditional Econometrics and Risk
 
@@ -59,7 +61,9 @@ Here is a non-esaustive list of interesting projects we have been researching an
 
 ### Staking Model
 
-In this section we discuss the staking model for CrunchDAO to enable people to stake on their models and get returns based on their performance and originality.
+In this section we introduce two objectives, a performance measure that could determine how good a prediction is and a diversity measure giving us a degree of orthogonality among predictions. The combination of these two requirements inform the ensemble learning step, following in the metamodel pipeline.
+
+One of the tournament's main constraint is keeping the reward system robust to Sybil attacks. One way to do it is to make having multiple accounts costly and futile. In other words to have each participant have skin in the game. In this scenario, the participant needs to lock some $CRUNCH in a smart contract, leading to a reward proportional to the amount of his/her stake.
 
 1. Inspired from [Validator-Delegator model of Cosmos blockchain](https://hub.cosmos.network/main/validators/validator-faq.html#how-to-become-a-validator).
 2. In CrunchDAO context: Validators -> MM heros, Delegators -> MM supporters
@@ -167,6 +171,13 @@ Having said that, it can be taken up as 2 step process:
 
 Originality is directly included in the reward computation as discussed. Since the payout is only for the staked users, using multiple accounts will be discouraged as there is no incentive in submitting from multiple accounts as the originality factor will reduce if ones does that.
 
+#### Multi-objective Optimization Problem and Gamification
+
+The need to both optimize for performance and originality naturally leads to the definition of a multi-objective optimization problem, for which the [Pareto Frontier](https://en.wikipedia.org/wiki/Pareto_front) can be computed.
+
+A Pareto optimal submission is a non-dominated vector in the vector space of all feasible submissions. These submissions are associated with a rewarding factor $\alpha > 1$, boosting the reward of submissions on the frontier associated with positive performance.
+tive.
+
 ### The Scoring System
 
 The current Scoring metric is the [Spearman's rank correlation coefficient](https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient) between the submission and the realized targets.
@@ -179,7 +190,17 @@ The current Scoring metric is the [Spearman's rank correlation coefficient](http
 
 ### Ensemble learning
 
-Ensamble Averging will be presented here.
+A straightforward approach is to compute a weighted average of all models based on their stakes. In mathematical terms, let's say we have $n$ participants and participant $u$ ($P_u$) has staked $C_u$ Crunch tokens where $u$=1, 2, \ldots, $n$ so the amount of involvement of each participant in the metamodel is
+
+\begin{equation*}
+w_u = \frac{C_u}{\sum_{u=1}^{n}{C_u}}
+\end{equation*}
+
+The final metamodel would be the weighted combination of the predictions submitted by participants. In this case. If $S_u$ represents prediction of $P_u$ then final prediction ($S$) is
+
+\begin{equation*}
+S = \sum_{u=1}^{n}{w_u S_u}
+\end{equation*}
 
 ### Porfolio Optimization
 
