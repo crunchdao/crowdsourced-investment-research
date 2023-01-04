@@ -1,7 +1,7 @@
 ---
 title: "CROWDSOURCED INVESTMENT RESEARCH"
 subtitle: "BY CRUNCHDAO"
-author: [Matteo Manzi, Enzo Caceres]
+author: [Matteo Manzi, Enzo Caceres, Correlator]
 date: "2022/11/01"
 lang: "en"
 colorlinks: true
@@ -42,14 +42,14 @@ CrunchDAO makes use of different datasets.
 - DOLLY: Portfolio managers invest a tremendous amount of time and resources in identifying equity that will outperform the market in the long term - alpha- ; In Dolly, the community leverages machine learning to select top long-term asset managers and piggyback their trades. Securities and Exchange Commission (SEC) 13f filing data offer valuable insight into top asset managers’ holdings at each quarterly filing point.
 - GORDON-GEEKO: This strategy uses trade information from top management and senior executives (i.e. insiders) as it has been demonstrated in past academic research that insiders have insight - or alpha - over other investors.
 
-### Anonymization 
+### Anonymization
 
 Data anonymization is performed using quantization schemes.
 
 Here is a non-esaustive list of interesting projects we have been researching and that could provide interesting tools to challange the current design choices:
 
 - [PySyft](https://github.com/OpenMined/PySyft)
-- [Weavechain](https://www.weavechain.com/) 
+- [Weavechain](https://www.weavechain.com/)
 - [BeekeperAI](https://www.beekeeperai.com/)
 - [Microsoft SEAL](https://github.com/microsoft/SEAL) and [associated compiler](https://github.com/microsoft/EVA)
 - [ZKML](https://github.com/zkml-community/awesome-zkml)
@@ -58,6 +58,7 @@ Here is a non-esaustive list of interesting projects we have been researching an
 ## Tournament
 
 ### Staking - Crunch Token
+
 1. Inspired from [Validator-Delegator model of Cosmos blockchain](https://hub.cosmos.network/main/validators/validator-faq.html#how-to-become-a-validator).
 2. In CrunchDAO context: Validators -> MM heros, Delegators -> MM supporters
 3. 100 Heros with the highest total stake are chosen for creating the stakeweighted MM.
@@ -77,7 +78,6 @@ Why this scheme makes sense:
 4. Good for overall tokenomics. As most of the tokens will be staked.
 5. Payouts create positive feedback and can be restaked instead of selling in open market.
 6. Unique scheme not followed by any of the competitors.
-
 
 Fineprints:
 
@@ -101,39 +101,39 @@ Benefits of Hierarchical clustering (Agglomerative clustering) in CrunchDao cont
 \textbf{Example}:
 
 \begin{itemize}
-	\item Model1
-    	\begin{itemize}
-        	\item Total Stake: 1000
+\item Model1
+    \begin{itemize}
+        \item Total Stake: 1000
             \item Part of Cluster 1
             \item Performance metric (spearman correlation): 0.03
-		\end{itemize}
+\end{itemize}
     \item Model 2
-    	\begin{itemize}
-        	\item Total Stake: 800
+    \begin{itemize}
+        \item Total Stake: 800
             \item Part of Cluster 2
             \item Performance metric (spearman correlation): 0.02
-		\end{itemize}
-   	\item Model 3
-    	\begin{itemize}
-        	\item Total Stake: 500
+\end{itemize}
+   \item Model 3
+    \begin{itemize}
+        \item Total Stake: 500
             \item Part of Cluster 1
             \item Performance metric (spearman correlation): 0.03
-		\end{itemize}
+\end{itemize}
     \item Payout multipliers
-    	\begin{itemize}
-        	\item Model 1, Model3 : 0.5  (Since they belong to same cluster)
+    \begin{itemize}
+        \item Model 1, Model3 : 0.5  (Since they belong to same cluster)
             \item Model 2: 1.0  (Unique cluster)
-		\end{itemize}
+\end{itemize}
     \item Payouts: (Stake * Performance * Multiplier)
-    	\begin{itemize}
-        	\item Model 1: 1000 * 0.03 * 0.5 = 15
+    \begin{itemize}
+        \item Model 1: 1000 * 0.03 * 0.5 = 15
             \item Model 2: 800 * 0.02 * 1.0 = 16
             \item Model 3: 500 * 0.03 * 0.05 = 7.5
-		\end{itemize}
+\end{itemize}
     \item Payout distribution to stakers (Model 2 example)
-    	\begin{itemize}
-        	\item Total payouts for Model 2 = 16
-        	\item Num Supporters = 3 (say) 
+    \begin{itemize}
+        \item Total payouts for Model 2 = 16
+        \item Num Supporters = 3 (say)
             \item Num Heroes = 1 (always)
             \item Hero Stake = 50 ; Supporters stake: 250 * 3 = 750 (assuming each supporter stakes 250 each)
             \item Hero commission (irrespective of Hero stake) = 25\% (to be chosen by Hero)

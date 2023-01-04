@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - name: Build PDF and HTML paper
+    - name: Build paper
       if: github.actor != 'dependabot[bot]' 
       run: |
         docker pull crunchdao/desci-pandoc
