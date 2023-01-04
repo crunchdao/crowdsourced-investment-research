@@ -1,7 +1,7 @@
 ---
 title: "CROWDSOURCED INVESTMENT RESEARCH"
 subtitle: "BY CRUNCHDAO"
-author: [Matteo Manzi, Enzo Caceres, Correlator]
+author: [Matteo Manzi, Enzo Caceres, Correlator, SRK]
 date: "2022/11/01"
 lang: "en"
 colorlinks: true
@@ -57,7 +57,9 @@ Here is a non-esaustive list of interesting projects we have been researching an
 
 ## Tournament
 
-### Staking - Crunch Token
+### Staking Model
+
+In this section we discuss the staking model for CrunchDAO to enable people to stake on their models and get returns based on their performance and originality.
 
 1. Inspired from [Validator-Delegator model of Cosmos blockchain](https://hub.cosmos.network/main/validators/validator-faq.html#how-to-become-a-validator).
 2. In CrunchDAO context: Validators -> MM heros, Delegators -> MM supporters
@@ -162,6 +164,8 @@ Having said that, it can be taken up as 2 step process:
 
 1. Evaluation of utility by the provider. Crunch team provides an api which can be used by providers to upload their feature (with stock tickers), the api returns the correlation of the queried feature with the existing features in the DataCrunch dataset. (not the correlation with target). This will let the providers know if their feature is unique or not.
 2. Say a provider develops a new feature which is unique wrt all other features in the dataset. Then, the provider can request a custom dataset (obfuscated like existing datasets) which includes that new feature. The provider is then free to use the new feature however they like to make predictions as usual for the tournament. For requesting a custom dataset, a small amount of Crunch can be locked (not staked) to avoid spamming.
+
+Originality is directly included in the reward computation as discussed. Since the payout is only for the staked users, using multiple accounts will be discouraged as there is no incentive in submitting from multiple accounts as the originality factor will reduce if ones does that.
 
 ### The Scoring System
 
