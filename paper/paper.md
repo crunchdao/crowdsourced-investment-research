@@ -19,13 +19,14 @@ abstract: "Markets are complex, high-dimensional, chaotic, stochastic, non-Gauss
 
 # Crowdsourced Investment Research
 
+
 ## Introduction
 
 In the context of quantitative finance, in which a systematic, rationalized, quantitative (i.e., scientific) approach is preferred over discretionary decision-making, the field of machine learning is getting a lot of traction [@Prado_2018]. This is because of its natural compatibility with a Bayesian approach [@Barber_2012], characterizing the field of econometrics, but also because of its potential to construct nonlinear models from financial data [@Chan_2022].
 
 In this context, CrunchDAO proposes an Ensamble Learning framework via tournaments ([@Craib_2017], [@Prado_2019]), in order to generate \textit{market-neutral} signals.
 
-In this section, we should make the case of ensamble learning in quantitative finance.
+In this section, we should make the case of ensamble learning in quantitative finance. Particularly discussing how, in the context of ensemble learning and bagging in particular, combining a variety of orthogonal models yields more accurate estimates of expectations.
 
 ## Traditional Econometrics and Risk
 
@@ -44,7 +45,11 @@ CrunchDAO makes use of different datasets.
 - DOLLY: Portfolio managers invest a tremendous amount of time and resources in identifying equity that will outperform the market in the long term - alpha- ; In Dolly, the community leverages machine learning to select top long-term asset managers and piggyback their trades. Securities and Exchange Commission (SEC) 13f filing data offer valuable insight into top asset managers’ holdings at each quarterly filing point.
 - GORDON-GEEKO: This strategy uses trade information from top management and senior executives (i.e. insiders) as it has been demonstrated in past academic research that insiders have insight - or alpha - over other investors.
 
-### Anonymization
+## Feature Engineering
+
+CrunchDAO's Machine-Learning-enabled ensemble framework builds on top of traditional econometric risk models, requiring a number of steps in the data preparation: features orthogonalization, standardization, model order reduction and data obfuscation will be discussed.
+
+### Data Obfuscation
 
 Data anonymization is performed using quantization schemes.
 
@@ -202,12 +207,14 @@ The final metamodel would be the weighted combination of the predictions submitt
 S = \sum_{u=1}^{n}{w_u S_u}
 \end{equation*}
 
+Moreover, the statistics of the set of predictions can be used to infer a measure of risk in the portfolio management process. We discuss how to integrate this in modern portfolio theory. We briefly discuss the necessary relation between these design choices and the ergodic hypothesis on financial.
+
+Discuss [Unscented Transform](https://en.wikipedia.org/wiki/Unscented_transform) and its relation to being able to estimate the portfolio risk in a variance sense using nonlinear models, like in the Unscented Kalman Filter and Particle methods [@Blackmore_2006].
+
+Same analogy as using high order surrogate models to propagate uncertainties even if just interested in mean and covariance [@stochastic_indicator2022], [@manzi_aas_2020].
+
 ### Porfolio Optimization
 
-[@Chriss_2005], [@Crama_2003]
-
-The constraints for CrunchDAO's portfolio are neutrality with respect to dollar, Risk Indices, Styles factors and Industry factors.
-
-Markovitz porfolio theory and constraints are discussed here.
+[@Stuart_1959], [@Chriss_2005], [@Crama_2003], [@Pafka_2004], [@Lobo_2007], [@Acikmese_2013]
 
 # References
