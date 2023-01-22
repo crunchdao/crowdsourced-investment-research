@@ -24,9 +24,9 @@ abstract: "Markets are complex, high-dimensional, chaotic, stochastic, non-Gauss
 
 In the context of quantitative finance, in which a systematic, rationalized, quantitative (i.e., scientific) approach is preferred over discretionary decision-making, the field of machine learning is getting a lot of traction [@Prado_2018]. This is because of its natural compatibility with a Bayesian approach [@Barber_2012], characterizing the field of econometrics, but also because of its potential to construct nonlinear models from financial data [@Chan_2022].
 
-In this context, CrunchDAO proposes an Ensamble Learning framework via tournaments ([@Craib_2017], [@Prado_2019]), in order to generate \textit{market-neutral} signals.
+In this context, CrunchDAO proposes an Ensemble Learning framework via tournaments ([@Craib_2017], [@Prado_2019]), in order to generate \textit{market-neutral} signals.
 
-In this section, we should make the case of ensamble learning in quantitative finance. Particularly discussing how, in the context of ensemble learning and bagging in particular, combining a variety of orthogonal models yields more accurate estimates of expectations.
+In this section, we should make the case of ensemble learning in quantitative finance. Particularly discussing how, in the context of ensemble learning and bagging in particular, combining a variety of orthogonal models yields more accurate estimates of expectations.
 
 ## Traditional Econometrics and Risk
 
